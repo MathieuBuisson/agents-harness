@@ -3,7 +3,7 @@ import fs from "fs/promises"
 import path from "path"
 
 export default tool({
-  description: "Execute Bicep commands (format, lint, build, generate-params) with automatic fallback and file validation.",
+  description: "Execute bicep commands (format, lint, build, generate-params) with `az bicep` CLI and fallback to `bicep` CLI for file validation.",
   args: {
     subcommand: tool.schema.enum(["format", "lint", "build", "generate-params"])
       .describe("The bicep subcommand to run"),
