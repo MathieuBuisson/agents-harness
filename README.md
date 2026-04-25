@@ -1,29 +1,31 @@
 # agents-harness
 
-Personal configuration, skills, and workflows for AI agents (Opencode, Antigravity).
+Personal configuration, skills, and workflows for AI agents (OpenCode, Antigravity).
 
 ## Agents Supported
 
-- **Opencode** — Config in `dot-config/opencode/`
+- **OpenCode** — Config in `dot-config/opencode/`
 - **Antigravity** — Config in `dot-gemini/`
 
 ## Directory Structure
 
 ```
 agents-harness/
-├── dot-agents/skills/                    # Opencode skills
+├── dot-agents/skills/                    # OpenCode skills
 │   ├── code-reviewer/
 │   ├── get-changes-since-last-commit/
 │   ├── load-project-context/
 │   ├── obsidian-markdown/
 │   └── update-docs/
 ├── dot-config/opencode/
-│   ├── AGENTS.md                          # Opencode persona
-│   └── opencode.json                      # Model config
+│   ├── AGENTS.md                          # OpenCode persona
+│   ├── opencode.json                      # Model config
+│   └── tools/
+│       └── bicep.ts                      # Enables OpenCode to run bicep commands (format, lint, build, generate-params)
 ├── dot-gemini/
 │   ├── GEMINI.md                          # Antigravity persona
 │   └── antigravity/
-│       ├── global_skills/                 # Antigravity skills (same format as Opencode)
+│       ├── global_skills/                 # Antigravity skills (same format as OpenCode)
 │       │   ├── code-reviewer/
 │       │   └── obsidian-markdown/
 │       ├── global_workflows/              # Antigravity workflows
@@ -34,7 +36,7 @@ agents-harness/
 
 ## Core Concepts
 
-| Concept | Opencode | Antigravity |
+| Concept | OpenCode | Antigravity |
 |---|---|---|
 | Persona | `AGENTS.md` | `GEMINI.md` |
 | Reusable instructions | `skills/` (folder + `SKILL.md`) | `global_skills/` (folder + `SKILL.md`) and `global_workflows/` (`.md` file) |
@@ -70,7 +72,7 @@ description: <description>
 
 ## Skill ↔ Workflow Sync
 
-Three items exist as both Opencode skills and Antigravity workflows:
+Three items exist as both OpenCode skills and Antigravity workflows:
 
 - `get-changes-since-last-commit`
 - `load-project-context`
@@ -85,7 +87,7 @@ When updating one, replicate to the other with appropriate format changes:
 
 Copy the relevant directories and files to the target repository.
 
-For Opencode:
+For OpenCode:
 - `dot-config/opencode/` → `~/.config/opencode/`
 - `dot-agents/skills/` → `~/.agents/skills/`
 
