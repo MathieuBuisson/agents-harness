@@ -21,7 +21,8 @@ agents-harness/
 │   ├── AGENTS.md                          # OpenCode persona
 │   ├── opencode.json                      # Model config
 │   └── tools/
-│       └── bicep.ts                      # Enables OpenCode to run bicep commands (format, lint, build, generate-params)
+│       ├── bicep.ts                      # Enables OpenCode to run bicep commands (format, lint, build, generate-params)
+│       └── black.ts                      # Enables OpenCode to run black to format Python code or check Python code style
 ├── dot-gemini/
 │   ├── GEMINI.md                          # Antigravity persona
 │   └── antigravity/
