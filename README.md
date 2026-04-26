@@ -22,7 +22,7 @@ agents-harness/
 │   ├── opencode.json                      # Model config
 │   └── tools/
 │       ├── bicep.ts                      # Enables OpenCode to run bicep commands (format, lint, build, generate-params)
-│       └── black.ts                      # Enables OpenCode to run black to format Python code or check Python code style
+│       └── mypy.ts                       # Run mypy to perform static type checking on Python files or directories
 ├── dot-gemini/
 │   ├── GEMINI.md                          # Antigravity persona
 │   └── antigravity/
