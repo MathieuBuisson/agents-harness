@@ -16,7 +16,7 @@ agents-harness/
 │   ├── get-changes-since-last-commit/
 │   ├── load-project-context/
 │   ├── obsidian-markdown/
-│   ├── socratic-architect/                  # Brainstorm and plan new coding projects through structured questioning
+│   ├── socratic-architect/                  # Brainstorm and plan new coding projects; produces a Specifications Document
 │   └── update-docs/
 ├── dot-config/opencode/
 │   ├── AGENTS.md                          # OpenCode persona
@@ -30,7 +30,7 @@ agents-harness/
 │       ├── global_skills/                 # Antigravity skills (same format as OpenCode)
 │       │   ├── code-reviewer/
 │       │   ├── obsidian-markdown/
-│       │   └── socratic-architect/            # Brainstorm and plan new coding projects through structured questioning
+│       │   └── socratic-architect/            # Brainstorm and plan new coding projects; produces a Specifications Document
 │       ├── global_workflows/              # Antigravity workflows
 │       ├── mcp_config.json
 │       └── skills.txt                     # Path to global_skills
