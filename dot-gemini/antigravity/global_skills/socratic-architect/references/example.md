@@ -1,11 +1,11 @@
-# Technical Proposal: example-app
+# Technical Proposal: {{ example-app }}
 
 ## 1. Project Structure
 ```text
 example-app/
-├── src/example-app/                  # Source package
+├── src/{{ example-app }}/                  # Source package
 │   ├── __init__.py
-│   ├── __main__.py              # Entry point: python -m example-app
+│   ├── __main__.py              # Entry point: python -m {{ example-app }}
 │   ├── cli.py                   # CLI argument parsing
 │   ├── scanner.py               # PDF discovery and path mapping
 │   ├── converter.py             # Single-file PDF→Markdown conversion
@@ -37,7 +37,7 @@ example-app/
 
 ```toml
 [project]
-name = "example-app"
+name = "{{ example-app }}"
 version = "0.1.0"
 requires-python = ">=3.13"
 dependencies = [
@@ -45,7 +45,7 @@ dependencies = [
 ]
 
 [project.scripts]
-example-app = "example-app.__main__:main"
+{{ example-app }} = "{{ example-app }}.__main__:main"
 
 [project.optional-dependencies]
 dev = [
@@ -58,7 +58,7 @@ dev = [
 ## 4. CLI Interface
 
 ```text
-usage: example-app [-h] INPUT -o DIR [--recurse] [--force] [--version]
+usage: {{ example-app }} [-h] INPUT -o DIR [--recurse] [--force] [--version]
 
 positional arguments:
   INPUT                  PDF file or folder containing PDFs
@@ -156,7 +156,7 @@ To prevent recursive self-processing:
 Invalid example:
 
 ```text
-example-app docs -o docs/output --recurse
+{{ example-app }} docs -o docs/output --recurse
 ```
 
 This must terminate immediately with exit code `1`.
@@ -192,7 +192,7 @@ LOG_FORMAT = (
 Example:
 
 ```text
-2025-01-15 10:23:01,452 - example-app - WARNING - convert:42 - Skipping encrypted PDF: locked.
+2025-01-15 10:23:01,452 - {{ example-app }} - WARNING - convert:42 - Skipping encrypted PDF: locked.
 ```
 
 If more than one file is processed, emit a final INFO summary.
@@ -216,11 +216,11 @@ pyinstaller \
     --console \
     --clean \
     --collect-all pymupdf \
-    --name example-app \
-    src/example-app/__main__.py
+    --name {{ example-app }} \
+    src/{{ example-app }}/__main__.py
 ```
 
-Produces a standalone `example-app.exe`.
+Produces a standalone `{{ example-app }}.exe`.
 
 > `--collect-all pymupdf` is required because PyMuPDF includes native extensions and resource files that PyInstaller cannot always detect automatically.
 
