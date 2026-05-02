@@ -7,12 +7,14 @@ description: Update the documentation files to reflect changes since the last co
 ## Guardrails
 - Do not modify any files.
 - Do not assume missing context.
+- **Do not guess repository state**: Always execute terminal commands (e.g., `git status`, `git diff`) to determine if the directory is a git repository and what has changed. Never rely on assumptions or conversational memory.
 - Prefer concise synthesis over long quotes.
 
 ## Steps
 
 ### 1. Discover the files that have been changed since the last commit
-- Find all the files that have been changed since the last git commit.
+- Execute `git status` to verify the git repository state and ensure you are tracking the correct changes.
+- Execute `git diff` and `git diff --staged` to find all the files that have been changed since the last git commit.
 
 ### 2. Identify the changes
 - For each file, identify the git diffs since the last git commit.
