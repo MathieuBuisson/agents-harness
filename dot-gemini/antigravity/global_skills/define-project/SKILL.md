@@ -1,11 +1,11 @@
 ---
-name: socratic-architect
+name: define-project
 description: Use this skill to brainstorm and plan a new coding project.
     Use this skill to clarify a new project's scope, goals, constraints, tech environment and requirements.
     Use this skill to gather all the information needed to produce a Specifications Document.
 ---
 
-# Socratic Architect
+# Define Project
 
 This skill guides the agent in a structured interrogation process to clarify the problem space (i.e. scope, goals, constraints and requirements) of a new coding project before suggesting any solutions.
 
