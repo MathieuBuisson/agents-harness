@@ -12,14 +12,14 @@ This reference covers the instructions to follows when creating or updating a pr
     - `[project root directory]/AGENTS.md` : A file that provides context and instructions to help AI agents work on the project.
 
 2. If the context files do not exist:
-  - Create the `AGENTS.md` file at the root of the repository, using [agents_example.md](agents_example.md)
+  - Create the `AGENTS.md` file at the root of the repository, using [agents_example.md](agents_example.md) as an example.
   - Create the `context` directory at the root of the repository, if it doesn't already exist.
   - Create the `session_history.md` file in the `context` directory, using [session_history.md](session_history.md) as reference.
   - Create the `task_plan.md` file in the `context` directory, using [task_plan.md](task_plan.md) as reference.
 
 3. If the context files already exist, update them as explained in the section **How to update context files**.
 
-## How to update context files
+## How to update existing context files
 
 ### session_history.md
 

@@ -28,35 +28,27 @@ This reference covers the instructions to read a project's context files and to 
 
 ### task_plan.md
 
-  1. Review the current task plan in the `task_plan.md` file.
-  2. If there are any new phases or tasks that need to be added to the task plan, add them under the appropriate phase or create a new phase if necessary.
-  3. Updating tasks:
+  1. Read the file `task_plan.md`.
+  2. Getting the status of tasks:
 
       - Each task is represented as a markdown checklist item (e.g., `- [ ] Task description`).
-      - Each task should be inside a phase
-      - If a task has not been completed, the box of the corresponding checklist item should be unchecked (e.g., `- [ ] Task description`).
-      - If a task has been completed, check the box of the corresponding checklist item (e.g., `- [x] Task description`).
+      - If the box of a checklist item is unchecked (e.g., `- [ ] Task description`), it means that the corresponding task has NOT been completed.
+      - If the box of a checklist item is unchecked (e.g., `- [x] Task description`), it means that the corresponding task has been completed.
 
-  4. Updating phases:
+  3. Getting the status of phases:
 
-      - Each phase should have a status that can be one of the following: `pending`, `in_progress`, or `complete`.
-      - If a phase does not contain any task or all the tasks it contains are NOT completed, its status should be `pending`.
-      - If a phase contains completed AND not completed tasks, its status should be `in_progress`.
-      - If all the tasks contained in a phase are completed, then the status of this phase should be `complete`.
-
-  5. If you are unsure if any new phases or tasks need to be added, ask the user for clarification on the current state of the project and any upcoming work that needs to be added to the `task_plan.md`.
-  6. If you are unsure about the status of any existing tasks, ask the user for clarification on which tasks have been completed.
-  8. Always ensure that the task plan is up to date and accurately reflects the current state of the project.
-  9. NEVER delete existing tasks or phases from the `task_plan.md` file. Always add new tasks or phases as needed and update the status of existing ones without removing them.
+      - Each phase has a status that can be one of the following: `pending`, `in_progress`, or `complete`.
+      - In this file, phases are listed in chronological order.
+      - The project's current phase is the first phase with the status set to: `in_progress`.
+      - If there are no phase with the status `in_progress`, then the project's current phase is the first one with the status set to: `pending`.
+      - Output to the user the current phase and all tasks contained in it.
 
 ### AGENTS.md
 
-  1. Export the current session history
-  2. Read the section named **Last action** in the existing `session_history.md` file to get the **Last action**'s description and date and time.
-  3. In the current session history, get all interactions, decisions, and code changes that have occurred since the **Last action**.
-  4. Discover the files that have been changed since the last commit:
-      - Execute `git status` to verify the git repository state and ensure you are tracking the correct changes.
-      - Execute `git diff` and `git diff --staged` to find all the files that have been changed since the last git commit.
-  5. Get the current content of the file `AGENTS.md`
-  6. Based on the current content of the file `AGENTS.md` and its purpose (provide context and instructions to help AI agents work on the project), determine whether any of the information gathered in steps 3 and 4 warrant any change to `AGENTS.md`.
-  7. If any change to `AGENTS.md` are warranted, display your proposed changes and ask for user's approval before writing them to `AGENTS.md`.
+  1. Get the current content of the file `AGENTS.md`
+  2. Keep this content in your session context, this is your instruction manual on how to work in this project.
+  3. The sections that are particularly important for you are :
+      - Architecture
+      - Repository layout
+      - Validation guidance
+      - Trust these instructions
