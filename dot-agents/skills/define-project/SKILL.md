@@ -1,8 +1,8 @@
 ---
 name: define-project
 description: Use this skill to brainstorm and plan a new coding project.
-    Use this skill to clarify a new project's scope, goals, constraints, tech environment and requirements.
-    Use this skill to gather all the information needed to produce a Specifications Document.
+  Use this skill to clarify a new project's scope, goals, constraints, tech environment and requirements.
+  Use this skill to gather all the information needed to produce a Specifications Document.
 ---
 
 # Define Project
