@@ -39,3 +39,4 @@
 This file is intended to be the authoritative guide for an agent onboarding this repository.
 - Use it first for project scope, layout, and validation.
 - Avoid extra exploration unless the repo changes or the task cannot be completed with the information here.
+- Whenever you complete a task, ALWAYS stop and ask for the user's approval before moving on to the next task.
