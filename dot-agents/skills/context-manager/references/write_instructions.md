@@ -8,14 +8,16 @@ This reference covers the instructions to follow when creating or updating a pro
     The context files managed by this skill are :
 
     - `[project root directory]/context/session_history.md`: A file that records the history of the project's sessions, including key decisions, discussions, and code changes.
-    - `[project root directory]/context/task_plan.md`: A file that outlines the current task plan, including phases.
+    - `[project root directory]/context/project_plan.md`: A file that outlines the current project plan, including phases and tasks.
     - `[project root directory]/AGENTS.md` : A file that provides context and instructions to help AI agents work on the project.
 
 2. If the context files do not exist:
   - Create the `AGENTS.md` file at the root of the repository, using [agents_example.md](agents_example.md) as an example.
   - Create the `context` directory at the root of the repository, if it doesn't already exist.
   - Create the `session_history.md` file in the `context` directory, using [session_history.md](session_history.md) as reference.
-  - Create the `task_plan.md` file in the `context` directory, using [task_plan.md](task_plan.md) as reference.
+  - Create the `project_plan.md` file in the `context` directory, using [project_plan.md](project_plan.md) as reference.
+    Make sure to read and understand the comments in `project_plan.md` because they explain how to use this file.
+    Make sure that the phases and tasks in `project_plan.md` are listed in chronological order.
 
 3. If the context files already exist, update them as explained in the section **How to update existing context files**.
 
@@ -36,9 +38,11 @@ This reference covers the instructions to follow when creating or updating a pro
   6. Update the section named **Last action** in the `session_history.md` file with a description of the last action and the date and time of this last action in the format `YYYY-MM-DD_hh:mm`.
   7. Update the line containing "**Date:**" in the first section of `session_history.md` with the current date in the format `YYYY-MM-DD`.
 
-### task_plan.md
+### project_plan.md
 
-  1. Review the current task plan in the `task_plan.md` file.
+  1. Review the current project plan in the `project_plan.md` file.
+    Make sure to read and understand the comments in `project_plan.md` because they explain how to use this file.
+    Make sure that the phases and tasks in `project_plan.md` are ALWAYS listed in chronological order.
   2. Update existing tasks as needed, like so:
 
       - Each task is represented as a markdown checklist item (e.g., `- [ ] Task description`).
@@ -53,11 +57,15 @@ This reference covers the instructions to follow when creating or updating a pro
       - If a phase contains completed AND not completed tasks, its status should be `in_progress`.
       - If all the tasks contained in a phase are completed, then the status of this phase should be `complete`.
 
-  4. If there are any new phases or tasks that need to be added to the task plan, add them under the appropriate phase or create a new phases as needed.
-  5. If you are unsure if any new phases or tasks need to be added, ask the user for clarification on the current state of the project and any upcoming work that needs to be added to the `task_plan.md`.
-  6. If you are unsure about the status of any existing tasks, ask the user for clarification on which tasks have been completed.
-  8. Always ensure that the task plan is up to date and accurately reflects the current state of the project.
-  9. NEVER delete existing tasks or phases from the `task_plan.md` file. Always add new tasks or phases as needed and update the status of existing ones without removing them.
+  4. If there are any new phases or tasks that need to be added to the project plan, add them under the appropriate phase or create a new phases as needed.
+  5. Update the section named **Current Phase** to the name of the current phase. Here is how to determine the current phase:
+      - The project's current phase is the first phase with the status set to: `in_progress`.
+      - If there are no phase with the status `in_progress`, then the project's current phase is the first one with the status set to: `pending`.
+    
+  6. If you are unsure if any new phases or tasks need to be added, ask the user for clarification on the current state of the project and any upcoming work that needs to be added to the `project_plan.md`.
+  7. If you are unsure about the status of any existing tasks, ask the user for clarification on which tasks have been completed.
+  8. Always ensure that the project plan is up to date and accurately reflects the current state of the project.
+  9. NEVER delete existing tasks or phases from the `project_plan.md` file. Always add new tasks or phases as needed and update the status of existing ones without removing them.
 
 ### AGENTS.md
 

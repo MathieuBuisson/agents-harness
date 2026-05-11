@@ -1,13 +1,13 @@
-# Task Plan: [Brief Description]
+# Project Plan: [Brief Description]
 <!-- 
-  WHAT: This is your roadmap for the entire task. Think of it as your "working memory on disk."
+  WHAT: This is your roadmap for the project. Think of it as your "working memory on disk."
   WHY: After 50+ tool calls, your original goals can get forgotten. This file keeps them fresh.
   WHEN: Create this FIRST, before starting any work. Update after each phase completes.
 -->
 
 ## Goal
 <!-- 
-  WHAT: One clear sentence describing what you're trying to achieve.
+  WHAT: One clear sentence describing the purpose of this project.
   WHY: This is your north star. Re-reading this keeps you focused on the end state.
   EXAMPLE: "Create a Python CLI todo app with add, list, and delete functionality."
 -->
@@ -16,14 +16,20 @@
 ## Current Phase
 <!-- 
   WHAT: Which phase you're currently working on (e.g., "Phase 1", "Phase 3").
-  WHY: Quick reference for where you are in the task. Update this as you progress.
+  WHY: Quick reference for where you are in the project. Update this as you progress.
 -->
 Phase 1
 
 ## Phases
 <!-- 
-  WHAT: Break your task into 3-7 logical phases. Each phase should be completable.
-  WHY: Breaking work into phases prevents overwhelm and makes progress visible.
+  WHAT: Decompose the project into 3-7 logical phases. List the phases in chronological order.
+  Each phase should be cleanly scoped and completable.
+  Each phase should be decomposed further into tasks.
+  Tasks within a phase should be listed in chronological order.
+  Tasks should be relatively small, cleanly scoped and completable.
+  Tasks are represented as a markdown checklist item (e.g., `- [ ] Task description`).
+  Whenever a task has more information or details about it in the `SPEC.md` file, reference the relevant sections in the `SPEC.md` file by using links to the specific section(s) or sub-section(s). For example: "For more information on activities, see [icu activities](../SPEC.md#icu-activities).
+  WHY: Decomposing work into phases and tasks provides clarity on where we are in the project, prevents overwhelm and makes progress visible.
   WHEN: Update status after completing each phase: pending → in_progress → complete
 -->
 
@@ -55,7 +61,8 @@ Phase 1
 ### Phase 3: Implementation
 <!-- 
   WHAT: Actually build/create/write the solution.
-  WHY: This is where the work happens. Break into smaller sub-tasks if needed.
+  Tasks should be relatively small, cleanly scoped and completable. So, if needed, decompose them further into smaller sub-tasks.
+  WHY: This is where the work happens.
 -->
 - [ ] Execute the plan step by step
 - [ ] Write code to files before executing
@@ -65,7 +72,7 @@ Phase 1
 ### Phase 4: Testing & Verification
 <!-- 
   WHAT: Verify everything works and meets requirements.
-  WHY: Catching issues early saves time. Document test results in progress.md.
+  WHY: Catching issues early saves time.
 -->
 - [ ] Verify all requirements met
 - [ ] Fix any issues found
@@ -81,17 +88,6 @@ Phase 1
 - [ ] Deliver to user
 - **Status:** pending
 
-## Key Questions
-<!-- 
-  WHAT: Important questions you need to answer during the task.
-  WHY: These guide your research and decision-making. Answer them as you go.
-  EXAMPLE: 
-    1. Should tasks persist between sessions? (Yes - need file storage)
-    2. What format for storing tasks? (JSON file)
--->
-1. [Question to answer]
-2. [Question to answer]
-
 ## Decisions Made
 <!-- 
   WHAT: Technical and design decisions you've made, with the reasoning behind them.
@@ -104,26 +100,12 @@ Phase 1
 |----------|-----------|
 |          |           |
 
-## Errors Encountered
-<!-- 
-  WHAT: Every error you encounter, what attempt number it was, and how you resolved it.
-  WHY: Logging errors prevents repeating the same mistakes. This is critical for learning.
-  WHEN: Add immediately when an error occurs, even if you fix it quickly.
-  EXAMPLE:
-    | FileNotFoundError | 1 | Check if file exists, create empty list if not |
-    | JSONDecodeError | 2 | Handle empty file case explicitly |
--->
-| Error | Attempt | Resolution |
-|-------|---------|------------|
-|       | 1       |            |
-
 ## Notes
 <!-- 
   REMINDERS:
   - Update phase status as you progress: pending → in_progress → complete
-  - Re-read this plan before major decisions (attention manipulation)
-  - Log ALL errors - they help avoid repetition
-  - Never repeat a failed action - mutate your approach instead
+  - Re-read this plan before major decisions
+  - Never repeat a failed action - change your approach instead
 -->
 - Update phase status as you progress: pending → in_progress → complete
 - Re-read this plan before major decisions (attention manipulation)

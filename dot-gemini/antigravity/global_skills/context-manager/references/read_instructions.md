@@ -8,7 +8,7 @@ This reference covers the instructions to read a project's context files and to 
     The context files managed by this skill are :
 
     - `[project root directory]/context/session_history.md`: A file that records the history of the project's sessions, including key decisions, discussions, and code changes.
-    - `[project root directory]/context/task_plan.md`: A file that outlines the current task plan, including phases.
+    - `[project root directory]/context/project_plan.md`: A file that outlines the current project plan, including phases and tasks.
     - `[project root directory]/AGENTS.md` : A file that provides context and instructions to help AI agents work on the project.
 
 2. If a context file does not exist, just skip to the next context file.
@@ -25,9 +25,11 @@ This reference covers the instructions to read a project's context files and to 
   2. Read the last 500 lines of this file to get the most recent interactions, decisions, and code changes.
   3. Read the section named **Last action** to get the **Last action**'s description and date and time.
 
-### task_plan.md
+### project_plan.md
 
-  1. Read the file `task_plan.md`.
+  1. Read the file `project_plan.md`.
+    Make sure to read and understand the comments in `project_plan.md` because they explain how to use this file.
+    Phases and tasks in `project_plan.md` are listed in chronological order.
   2. Getting the status of tasks:
 
       - Each task is represented as a markdown checklist item (e.g., `- [ ] Task description`).
@@ -39,8 +41,7 @@ This reference covers the instructions to read a project's context files and to 
 
       - Each phase has a status that can be one of the following: `pending`, `in_progress`, or `complete`.
       - In this file, phases are listed in chronological order.
-      - The project's current phase is the first phase with the status set to: `in_progress`.
-      - If there are no phase with the status `in_progress`, then the project's current phase is the first one with the status set to: `pending`.
+      - Read the section named **Current Phase** to get the name of the current phase.
       - Output to the user the current phase and all tasks contained in it.
 
 ### AGENTS.md
